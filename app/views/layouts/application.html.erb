@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,17 +10,15 @@
     <title>FacebookApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <nav class="navbar navbar-expand-sm bg-primary" style= "position:fixed; width:100%;margin-top:0px;">
-
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-sm bg-primary fixed-top">
       <!-- Links -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#"><%= image_tag "img8.png" , class: "himg" %></a>
-          
+          <a class="nav-link" href="#"><%= image_tag "img8.png" , class: "himg" %></a>          
         </li>
         <li class="nav-item">
           <a class="nav-link" href="">
@@ -47,24 +44,13 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><%= image_tag "notification.jpg" , class: "himg" %></a>
-          
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><%= image_tag "help.jpg" , class: "himg" %></a>
-          
         </li>
-        
       </ul>
-
     </nav>
-  </head>
-  <br><br><br><br><br><br>
-  <body>
-      <center>
-      <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-info" %>
-      <%= link_to 'Sign In', new_user_session_path, class: "btn btn-info"  %>
-      <%= link_to 'Sign Out', destroy_user_session_path, class: "btn btn-danger", method: :delete %>
-      </center>
+    <br><br><br><br><br><br>
       <div class="row">
         <div class="col-sm-3">
           <ul class="list-unstyled components">

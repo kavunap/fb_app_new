@@ -1,12 +1,18 @@
 
+<% if user_signed_in? %>
+<%= link_to 'Sign Out', destroy_user_session_path, class: "btn btn-danger ", method: :delete %>
+<% else %>
 
+<%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-info" %>
 
-<h1 >Posts</h1>
+<%= link_to 'Sign In', new_user_session_path, class: "btn btn-info"  %>
+<% end %>
+<h1 >Lists Posts</h1>
 
 <br><br>
 <table>
   <thead>
-   <h2> Posts fro your friends! you can view details</h2>
+   <h2> Posts from your friends! you can view details</h2>
   </thead>
 
   <tbody>
@@ -21,6 +27,7 @@
         <%= link_to 'Edit ', edit_post_path(post), class: "btn btn-warning" %>
         <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
         <% end %>
+        
       </tr>
     <% end %>
   </tbody>
