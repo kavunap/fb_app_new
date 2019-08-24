@@ -19,7 +19,7 @@
       <tr>
         <td><h3><%= post.title %></h3><br>
         <p ><%= post.content %></p><br>
-        <%= image_tag post.image.url %><br>
+        <%= image_tag post.image.url,style: "width:500px;height:600px;" %><br>
         <%= post.user.email %><br>
         <%= link_to 'Details', post, class: "btn btn-info" %>
         <% if post.user == current_user %>
